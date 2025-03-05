@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html">JC.</a></div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="lian">
+        <div class="peslak">
+            <img src="69e48aa3-0dfa-429d-873d-144c60b99a50.jpg" alt="Profile Image">
+        </div>
+        <p>Hello friend, I'm <strong>Juliana Josh Yumi Columbres</strong>, happy to help.</p>
+        <a href="#" class="btn">Learn More</a>
+    </section>
+    
+    <section class="certificates">
+        <h2>CERTIFICATES</h2>
+        <div class="certificate-container">
+            <img src="Screenshot 2025-03-05 191414.png" alt="Certificate">
+        </div>
+    </section>
+    
+    <section class="testimonials">
+        <h2>TESTIMONIALS</h2>
+        <div id="testimonial-list"></div>
+        <div class="testimonial-input-container">
+            <textarea id="testimonial-input" placeholder="Write a testimonial..."></textarea>
+            <button onclick="addTestimonial()">Submit</button>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">JC.</div>
+            <ul class="footer-links">
+                <li><a href="#">Achievements</a></li>
+                <li><a href="#">Certificates</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    <script>
+        function addTestimonial() {
+            let input = document.getElementById("testimonial-input");
+            let list = document.getElementById("testimonial-list");
+            if (input.value.trim() !== "") {
+                let p = document.createElement("p");
+                p.textContent = input.value;
+                list.appendChild(p);
+                input.value = "";
+            }
+        }
+    </script>
+</body>
+</html>
